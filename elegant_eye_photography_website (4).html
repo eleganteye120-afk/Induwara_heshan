@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEGANT EYE | Induwara Heshan Weddings</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts: Cormorant Garamond (Serif), Plus Jakarta Sans (Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    },
+                    colors: {
+                        luxury: {
+                            bg: '#08080a',
+                            card: 'rgba(18, 18, 22, 0.82)',
+                            cardHover: 'rgba(28, 28, 35, 0.90)',
+                            silver: '#e2e8f0',
+                            platinum: '#f8fafc',
+                            border: 'rgba(255, 255, 255, 0.18)',
+                            borderHover: 'rgba(255, 255, 255, 0.55)',
+                            glow: 'rgba(255, 255, 255, 0.12)'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #060608;
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        /* Dark Camera Lens Background Overlay */
+        .bg-lens-dark {
+            background: linear-gradient(180deg, rgba(6, 6, 8, 0.82) 0%, rgba(6, 6, 8, 0.93) 50%, rgba(6, 6, 8, 0.98) 100%), 
+                        url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        /* Ambient White Vignette Flare */
+        .ambient-flare {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            background: radial-gradient(circle at 50% 10%, rgba(255, 255, 255, 0.07) 0%, transparent 60%),
+                        radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        /* Glassmorphism Luxury Card */
+        .glass-card {
+            background: rgba(18, 18, 24, 0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.03);
+        }
+
+        /* Interactive White & Silver Action Buttons */
+        .classic-action-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            backdrop-filter: blur(12px);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .classic-action-btn:hover {
+            background: rgba(255, 255, 255, 0.14);
+            border-color: rgba(255, 255, 255, 0.65);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.15);
+        }
+
+        /* Gentle White Pulse Ring */
+        @keyframes whitePulseRing {
+            0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.15); }
+            50% { box-shadow: 0 0 30px rgba(255, 255, 255, 0.35); }
+        }
+
+        .white-halo {
+            animation: whitePulseRing 3.5s infinite ease-in-out;
+        }
+
+        .text-glow-white {
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.35);
+        }
+    </style>
+</head>
+<body class="bg-lens-dark relative flex flex-col justify-between min-h-screen selection:bg-white selection:text-black">
+
+    <!-- Ambient Silver Background Layer -->
+    <div class="ambient-flare"></div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 flex flex-col items-center">
+
+        <!-- HEADER SECTION -->
+        <header class="text-center w-full max-w-3xl mb-12">
+            <!-- Profile Avatar with White/Silver Halo -->
+            <div class="relative inline-block mb-6">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 rounded-full p-1 bg-gradient-to-tr from-slate-400 via-white to-slate-500 shadow-2xl shadow-black/80 mx-auto white-halo">
+                    <div class="w-full h-full rounded-full bg-black flex items-center justify-center border-2 border-white/60 overflow-hidden relative group">
+                        <img src="WhatsApp Image 2026-10-03 at 2.30.18 AM.jpeg" 
+                             alt="Induwara Heshan Photography" 
+                             class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                             onerror="this.onerror=null; this.src='https://placehold.co/400x400/111115/ffffff?text=Induwara+Heshan';">
+                    </div>
+                </div>
+                <!-- Status indicator -->
+                <span class="absolute bottom-2 right-3 bg-slate-100 border-2 border-black w-4 sm:w-5 h-4 sm:h-5 rounded-full ring-2 ring-white/50" title="Studio Open for Bookings"></span>
+            </div>
+
+            <!-- Main Brand Title -->
+            <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-bold tracking-wider text-white uppercase drop-shadow-2xl text-glow-white">
+                ELEGANT EYE
+            </h1>
+            
+            <div class="flex items-center justify-center gap-3 my-3">
+                <span class="h-[1px] w-12 sm:w-16 bg-gradient-to-r from-transparent via-white/50 to-transparent"></span>
+                <p class="font-serif text-sm sm:text-lg font-medium tracking-[0.2em] text-slate-200 uppercase">
+                    INDUWARA HESHAN WEDDINGS
+                </p>
+                <span class="h-[1px] w-12 sm:w-16 bg-gradient-to-r from-transparent via-white/50 to-transparent"></span>
+            </div>
+
+            <p class="text-[11px] sm:text-xs text-slate-400 font-light tracking-[0.25em] uppercase mt-2">
+                Photography & Videography Studio | Sri Lanka
+            </p>
+        </header>
+
+        <!-- TWO-COLUMN SPLIT LAYOUT CONTAINER -->
+        <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+
+            <!-- LEFT SIDE: DIRECT CONTACT & SOCIAL MEDIA (5 Columns) -->
+            <div class="lg:col-span-5 w-full space-y-8">
+
+                <!-- DIRECT CONTACT & BOOKINGS -->
+                <section class="w-full space-y-3.5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-8 h-[1px] bg-white/30"></span>
+                        <h2 class="text-xs font-semibold tracking-[0.25em] text-slate-300 uppercase">
+                            DIRECT CONTACT & BOOKINGS
+                        </h2>
+                        <span class="flex-grow h-[1px] bg-white/10"></span>
+                    </div>
+
+                    <!-- WhatsApp Direct Chat Card -->
+                    <a href="https://wa.me/94777752696" target="_blank" rel="noopener noreferrer"
+                       class="classic-action-btn w-full rounded-2xl p-4 sm:p-5 flex items-center justify-between group shadow-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-white/10 border border-white/25 flex items-center justify-center text-2xl text-white group-hover:scale-105 transition-transform">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="text-left">
+                                <span class="text-[10px] font-medium tracking-widest text-slate-400 uppercase block">WhatsApp Direct Chat</span>
+                                <span class="text-base sm:text-lg font-semibold text-white tracking-wide">0777752696</span>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 group-hover:bg-white group-hover:text-black text-white px-3.5 py-2 rounded-xl text-xs font-medium flex items-center gap-2 border border-white/25 transition-all">
+                            Chat Now <i class="fa-solid fa-comment-dots text-xs"></i>
+                        </div>
+                    </a>
+
+                    <!-- Hotline Call Card -->
+                    <a href="tel:0760386120"
+                       class="classic-action-btn w-full rounded-2xl p-4 sm:p-5 flex items-center justify-between group shadow-xl">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-xl bg-white/10 border border-white/25 flex items-center justify-center text-xl text-white group-hover:scale-105 transition-transform">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="text-left">
+                                <span class="text-[10px] font-medium tracking-widest text-slate-400 uppercase block">Hotline Call</span>
+                                <span class="text-base sm:text-lg font-semibold text-white tracking-wide">0760386120</span>
+                            </div>
+                        </div>
+                        <div class="bg-white/10 group-hover:bg-white group-hover:text-black text-white px-3.5 py-2 rounded-xl text-xs font-medium flex items-center gap-2 border border-white/25 transition-all">
+                            Call Now <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </a>
+                </section>
+
+                <!-- SOCIAL MEDIA PAGES -->
+                <section class="w-full space-y-3.5">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="w-8 h-[1px] bg-white/30"></span>
+                        <h2 class="text-xs font-semibold tracking-[0.25em] text-slate-300 uppercase">
+                            SOCIAL MEDIA PAGES
+                        </h2>
+                        <span class="flex-grow h-[1px] bg-white/10"></span>
+                    </div>
+
+                    <!-- Instagram Profile -->
+                    <a href="https://www.instagram.com/elegant_eye_01?stkn=MXJ6bjVxaXEzN281" target="_blank" rel="noopener noreferrer"
+                       class="classic-action-btn w-full rounded-2xl p-4 flex items-center justify-between group shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-2xl text-white group-hover:scale-105 transition-transform">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="font-semibold text-white text-sm sm:text-base group-hover:text-slate-200 transition-colors">Instagram Profile</h3>
+                                <p class="text-xs text-slate-400 font-light">@elegant_eye_01</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-white transition-colors"></i>
+                    </a>
+
+                    <!-- Facebook Page 1: Elegant Eye -->
+                    <a href="https://www.facebook.com/profile.php?id=61572952013910&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"
+                       class="classic-action-btn w-full rounded-2xl p-4 flex items-center justify-between group shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-2xl text-white group-hover:scale-105 transition-transform">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="font-semibold text-white text-sm sm:text-base group-hover:text-slate-200 transition-colors">Elegant Eye</h3>
+                                <p class="text-xs text-slate-400 font-light">Facebook Official Page</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-white transition-colors"></i>
+                    </a>
+
+                    <!-- Facebook Page 2: Induwara Heshan Weddings -->
+                    <a href="https://www.facebook.com/profile.php?id=61589368644072&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer"
+                       class="classic-action-btn w-full rounded-2xl p-4 flex items-center justify-between group shadow-lg">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-11 h-11 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-2xl text-white group-hover:scale-105 transition-transform">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                            <div class="text-left">
+                                <h3 class="font-semibold text-white text-sm sm:text-base group-hover:text-slate-200 transition-colors">Induwara Heshan Weddings</h3>
+                                <p class="text-xs text-slate-400 font-light">Wedding Photography Page</p>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-400 group-hover:text-white transition-colors"></i>
+                    </a>
+                </section>
+
+                <!-- STUDIO SERVICES TAGS -->
+                <section class="w-full glass-card rounded-2xl p-5 text-center border border-white/15">
+                    <h3 class="font-serif text-xs font-semibold text-slate-300 tracking-[0.2em] uppercase mb-3">
+                        STUDIO SERVICES
+                    </h3>
+                    <div class="flex flex-wrap justify-center gap-2 text-xs text-slate-300 font-light">
+                        <span class="bg-white/5 border border-white/15 px-3 py-1.5 rounded-full">Wedding Photography</span>
+                        <span class="bg-white/5 border border-white/15 px-3 py-1.5 rounded-full">Preshoot Sessions</span>
+                        <span class="bg-white/5 border border-white/15 px-3 py-1.5 rounded-full">Event Videography</span>
+                        <span class="bg-white/5 border border-white/15 px-3 py-1.5 rounded-full">Portrait Shoots</span>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- RIGHT SIDE: WHO WE ARE? STORY SECTION (7 Columns) -->
+            <div class="lg:col-span-7 w-full">
+                <section class="w-full glass-card rounded-3xl p-6 sm:p-9 border border-white/20 relative overflow-hidden h-full flex flex-col justify-between">
+                    <!-- Subtle Watermark -->
+                    <div class="absolute -right-8 -bottom-8 opacity-[0.03] text-white pointer-events-none text-[14rem]">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+
+                    <div>
+                        <!-- Section Header Badge -->
+                        <div class="flex flex-col items-center sm:items-start mb-6">
+                            <span class="font-serif text-xl sm:text-2xl font-bold tracking-[0.25em] text-white uppercase px-6 py-2 rounded-full border border-white/30 bg-white/10 shadow-lg text-glow-white">
+                                WHO WE ARE?
+                            </span>
+                            <div class="w-20 h-[1px] bg-gradient-to-r from-white/60 to-transparent mt-3"></div>
+                        </div>
+
+                        <!-- Main Narrative Content -->
+                        <div class="space-y-5 text-xs sm:text-sm text-slate-200 leading-relaxed font-light">
+                            <!-- Introduction Box -->
+                            <div class="p-4 rounded-2xl bg-white/5 border-l-4 border-white/80 shadow-inner">
+                                <p class="text-sm sm:text-base text-white font-medium">
+                                    My name is <span class="font-bold tracking-wider text-slate-100">INDUWARA HESHAN</span>. I am a <span class="font-semibold text-slate-200 tracking-wider uppercase">PROFESSIONAL PHOTOGRAPHER</span>.
+                                </p>
+                            </div>
+
+                            <p class="text-slate-300">
+                                My brands, <strong class="text-white font-medium">INDUWARA HESHAN WEDDINGS & THE ELEGANT EYE</strong>, transform all your precious moments and precious movements into precious memories with my creative eye and give them to you.
+                            </p>
+
+                            <p class="text-slate-300">
+                                As a passionate and professional photographer, I love capturing your every moment and creating a story that is worth telling, a precious memory.
+                            </p>
+
+                            <!-- Highlighted Quote Card -->
+                            <div class="p-5 rounded-2xl bg-gradient-to-r from-white/10 via-white/5 to-transparent border border-white/20 my-4">
+                                <p class="italic text-slate-100 font-serif text-base sm:text-lg text-center leading-snug">
+                                    "I focus on turning fleeting moments with beautiful emotions into lasting memories."
+                                </p>
+                            </div>
+
+                            <!-- Closing Core Mission Statement -->
+                            <div class="p-5 rounded-2xl bg-white/10 border border-white/25 shadow-xl text-center">
+                                <p class="font-medium text-xs sm:text-sm tracking-widest text-slate-100 uppercase leading-relaxed">
+                                    AT THE ELEGANT EYE & INDUWARA HESHAN, WEDDING PHOTOGRAPHY IS NOT JUST A PROCESS — IT IS AN EXPERIENCE FILLED WITH CREATIVITY, JOY, AND UNFORGETTABLE MOMENTS.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Studio Aesthetic Signature Footer -->
+                    <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between text-slate-400 text-[11px]">
+                        <span class="flex items-center gap-2"><i class="fa-solid fa-award text-white"></i> Premium Wedding Photography</span>
+                        <span class="font-serif italic text-slate-300 text-sm">Sri Lanka</span>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="relative z-10 w-full py-6 text-center text-[11px] text-slate-500 border-t border-white/10 bg-black/90">
+        <p class="tracking-widest uppercase">&copy; <script>document.write(new Date().getFullYear())</script> <strong>ELEGANT EYE & INDUWARA HESHAN WEDDINGS</strong></p>
+        <p class="text-[10px] text-slate-600 mt-1">Professional Photography & Videography Studio • Sri Lanka</p>
+    </footer>
+
+</body>
+</html>
